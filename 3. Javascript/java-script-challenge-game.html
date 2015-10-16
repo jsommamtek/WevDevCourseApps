@@ -1,0 +1,65 @@
+
+<!doctype html>
+<html>
+<head>
+
+    <title>Javascript Challenge Game</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<style type="text/css">
+
+		body {
+
+			font-family: Verdana, Geneva, sans-serif;
+
+		}
+
+
+		#box1 {
+
+			width: 200px;
+			height: 200px;
+			background-color: blue;
+			visibility: hidden;
+
+		}
+
+		#playground {
+
+			width: 800px;
+			height: 800px;		
+			border: 0px solid;
+			visibility: visible;
+			
+		}
+
+		.bold {
+
+			font-weight: bold;
+		}
+
+	</style>
+
+</head>
+
+<body>
+
+	<h1>Test Your Reactions Game</h1>
+
+	<p>Click on the boxes and circles as quickly as you can!</p>
+
+	<p class="bold">Your Time Was: <span id="time"></span></p> 
+
+	<div id="playground">
+
+		<div id="box1">	</div>
+
+	</div>
+
+	<script src="scripts/game.js"></script>
+
+</body>
+</html>

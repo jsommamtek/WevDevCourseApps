@@ -1,0 +1,179 @@
+	body {
+		margin: 0;
+		font-family: Arial, Helvetica, freesans, sans-serif;
+	}
+	
+	#topbar {
+		background-color: #891212;
+		width: 100%;
+		height: 40px;
+		color: white;   
+	}	
+				
+	.fixedwidth {
+		width: 1050px;
+		margin: 0 auto;
+	}
+	
+	#logodiv {
+		padding-top: 3px; 
+		padding-right: 10px;
+		float:left;
+		border-right: 1px solid #343434;
+		margin: 0 auto;
+	}
+	
+	#signindiv {
+		padding-top: 3px; 
+		padding-right: 70px;
+		padding-bottom: 1px;
+		padding-left: 10px;
+		float:left;
+		border-right: 1px solid #343434;
+		margin: 0 auto;
+	}
+
+	#topmenudiv {
+	
+		margin: 0 auto;
+
+	}
+	#topmenudiv ul {
+		
+		margin: 0 auto;
+	
+	}
+
+	#topmenudiv li {
+	
+		list-style: none;
+		font-weight: bold;
+		font-size: 0.9em;
+		border-right: 1px solid #343434;
+		float: left;
+		padding: 12px 20px 12px 20px;
+	}
+	
+	#searchdiv {
+		float: left;
+		padding: 10px;
+	}
+	
+	#searchdiv input {
+		width: 150px;
+		border: none;
+		font-size: 0.8em;
+		background-image: url("images/search.png");
+		background-size: 30px;
+		background-repeat: no-repeat;
+		background-position: right center;
+
+	}	
+	
+	#newsbar {
+		background-color: #BB1919;
+		width: 100%;
+		height: 90px;
+		color: white;   
+	}
+	
+	#newsbar p {
+		margin: 0;
+		padding-top: 10px;
+		float: left;
+	}
+	
+	#newsheader {
+		font-size: 2.5em; 
+	}
+	
+	#uk {
+		font-size: 0.7em; 
+		padding: 10px;
+	}
+	
+	#rss {
+		float: right;
+		margin-top: 30px;
+	}
+	
+	#topicmenu {
+		margin: 0 auto;
+		clear: both;
+		padding: 9px 0px 0px 0px;
+	}
+	
+	#topicmenu ul {
+		margin: 0 auto;
+		padding: 0px 0px 0px 0px;
+		background-color: black;
+		height: 26px;
+	}
+
+	#topicmenu li {
+		list-style: none;
+		font-weight: bold;
+		font-size: 0.8em;
+		border-right: 1px solid #343434;
+		padding: 6px 10px 5px 10px;
+		float: left;
+	}
+	
+	.selected {
+	 	background-color: white;
+	 	color: grey;
+	}
+	
+	#content {
+		width: 100%;
+		color: grey;   
+	}
+	
+	.date {
+		font-weight: bold;
+
+	}
+	
+	h1 {
+		color: grey;
+
+	}
+	
+	.headlineimage {
+		float: left;
+	}
+	
+	.newsitemdetail {
+		position: relative;
+		left: 20px;
+		top: -20px;
+		width: 300px;
+		float: left;
+	}
+	
+	.newsitemdetail ul {
+		margin: 0 auto;
+		padding: 0px 0px 0px 0px;
+	}
+
+	.newsitemdetail li {
+		list-style: none;
+	}
+	
+	#watchlisten {
+		background-color: lightgray;
+		width: 300px;
+		float: right;
+		position: relative;
+		top: -40px;
+	}
+	
+	h2 {
+		color: gray;
+		margin: 10px 10px 10px 10px;
+	}
+	
+	.boxes {
+		float: right;
+		margin: 10px 10px 10px 10px;		
+	}

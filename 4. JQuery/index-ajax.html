@@ -1,0 +1,55 @@
+
+<!doctype html>
+<html>
+<head>
+
+    <title>Learning JQuery - AJAX</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<style type="text/css">
+
+
+	</style>
+
+	<script type="text/javascript" src="scripts/jquery-2.1.4.min.js"></script>
+
+</head>
+
+<body>
+
+	<h1>Asynchronous Javascript and XML</h1>
+	
+	<script>
+
+			if (typeof jquery-2 != "undefined") {
+
+				//alert('JQuery is installed!');
+
+			} else {
+
+				alert('JQuery is not installed!');
+
+			}
+
+			//jQuery AJAX call
+			$.get("test.html", function(data) {
+				alert(data);
+			});
+
+			//$.ajax({
+
+			//	url:"test.html"
+
+			//}).done(function(data) {
+
+			//	$("h1").append(data);
+
+			//});
+
+	</script>
+
+</body>
+</html>
