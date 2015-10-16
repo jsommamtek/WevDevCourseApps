@@ -1,0 +1,273 @@
+
+<!doctype html>
+<html>
+<head>
+
+    <title>Learning Javascript</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<style type="text/css">
+
+
+	#red-circle {
+
+		width: 400px;
+		height: 400px;
+		background-color: red;
+		border-radius: 200px;
+
+	}
+
+	</style>
+
+</head>
+
+<body>
+
+<input id="myInput" type="text" value="some text" />
+
+<button id="styleChanger" >Change the text!</button>
+
+<div id="red-circle" >This is a red circle</div>
+
+<button id="textChanger">Change first div text</button>
+
+<div id="firstDiv">This is some text</div> 
+
+<button id="textAppender">Append some text</button>
+
+<div id="secondDiv">Javascript is...</div>
+
+<button id="textCreator">Create some text</button>
+
+<div id="emptyDiv"></div>
+
+
+
+
+<p>What is the weather?</p>
+
+<input id="weather" type="text"/>
+
+<button id="myButton">Submit</button>
+
+
+<p>How many fingers?</p>
+
+<input id="fingers" type="text"/>
+
+<button id="myGuess">Submit</button>
+
+
+<p id="arrayString"></p>
+
+
+<p>How many fingers are you holding up?</p>
+
+<input id="myNumber" />
+
+<button id="guess">Guess!</button> 
+
+
+<script type="text/Javascript">
+
+	// Some Comments go here
+
+	/*
+
+	This is a
+	Multi-line comment section
+
+	*/
+
+	document.getElementById("textChanger").onclick=function() {
+
+		document.getElementById("firstDiv").innerHTML="This is awesome";
+	}
+
+	document.getElementById("textAppender").onclick=function() {
+
+		document.getElementById("secondDiv").innerHTML=document.getElementById("secondDiv").innerHTML + "is great";
+	}
+
+	document.getElementById("textCreator").onclick=function() {
+
+		document.getElementById("textCreator").innerHTML="<ul><li>Cat</li><li>Dog</li><li>Fish</li></ul>";
+	}
+
+
+	var newText; // = document.getElementById("myInput").value;
+
+
+	var myArray = new Array();
+
+	myArray[0] = "Pizza";
+	myArray[1] = "Chocolate";
+
+	//console.log(myArray);
+
+	myOtherArray = ["rain", "sunshine"];
+
+	myOtherArray.push("snow");
+
+	myOtherArray.splice(2, 0, "hail", "cloudy");
+
+	console.log(myOtherArray.length);	
+
+
+
+	document.getElementById("styleChanger").onclick=function() {
+
+		newText = document.getElementById("myInput").value;
+
+		document.getElementById("red-circle").innerHTML = myArray[1];
+	}
+
+
+	var divId = "red-circle";
+
+	var bgColor;
+
+	document.getElementById(divId).onclick = function() {
+
+
+		bgColor = document.getElementById(divId).style.backgroundColor;
+
+		//alert(bgColor);
+
+		if (bgColor == "red") {
+
+			document.getElementById(divId).style.backgroundColor = "white";
+			//alert("if");
+
+		} else {
+
+			document.getElementById(divId).style.backgroundColor = "red";
+			//alert("else");			
+
+		}
+
+	}
+
+	document.getElementById("myButton").onclick = function() {
+
+		if (document.getElementById("weather").value == "rain") {
+
+			alert("It's raining");
+
+		} else {
+
+			alert("It's not raining");
+		}
+	}
+
+
+		document.getElementById("myGuess").onclick = function() {
+
+		var x = Math.random();
+
+		x = x * 6;
+
+		x = Math.floor(x);
+
+		//alert(x);
+
+		if (document.getElementById("fingers").value == x) {
+
+			alert("Correct!");
+
+		} else {
+
+			alert("Nope! My number was " + x);
+		}
+	}
+
+
+	var arrayString="";
+
+	var jsArray=["pizza", "chocolate", "crisps"];
+
+	var i=0;
+
+	while (i<jsArray.length) {
+
+		arrayString=arrayString + jsArray[i] + ", ";
+
+		i++;
+
+	}
+
+
+	//for (var i=0; i<jsArray.length; i++) {
+
+	//	arrayString=arrayString + jsArray[i] + ", ";
+
+	//}
+
+	document.getElementById("arrayString").innerHTML = arrayString;
+
+
+	document.getElementById("guess").onclick=function() {
+
+		var gotIt = false;
+
+		var guesses = 1;
+
+		var x;
+
+		while (gotIt==false) {
+
+
+			x=Math.random();
+
+			x=x*6;
+
+			x=Math.floor(x);
+
+			//alert(x);
+			
+			if (document.getElementById("myNumber").value == x) {
+
+				gotIt=true;
+
+			} else {
+
+				guesses++;
+
+				if (guesses > 20) {
+
+					break;
+				}
+
+			}	
+
+		}
+
+		if (guesses > 20) {
+
+			alert("I give up couldn't get it!");
+
+		} else {
+
+
+			alert("I got it! It was a " + x + " It only took me " + guesses + " guesses!");
+		}
+
+	}
+
+
+	function adding(a, b) {
+
+		return(a+b);
+	}
+
+	alert(adding(3,13));
+
+
+</script>
+
+</body>
+</html>
