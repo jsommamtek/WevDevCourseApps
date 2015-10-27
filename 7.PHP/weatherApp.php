@@ -13,40 +13,20 @@
 	<!-- Optional theme -->
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 
-	<!-- LOCAL CSS -->
-	<style>
-		
-		html, body {
-			height: 100%;
-		}
-
-		.main-container {
-			width: 100%;
-			height: 100%;
-			background-image: url("weather-app-background.jpeg");
-			background-position: center;
-			padding-top: 10px;
-		}
-		
-		.center {
-			text-align: center;	
-		}
-		
-		.bold {
-			font-weight: bolder;
-		}
-		
-		
-	</style>
-		
+	<!-- APP CSS REF -->
+	<link rel="stylesheet" href="assets/css/app.css">
+	
 </head>
+
+<!-- MAIN BODY -->
+
 <body>
 	<div class="container main-container">
 		<div class="row">
 			<div class="col-md-6 col-md-offset-3 email-form">
 			
-				<h2 class="center">Amazing Weather App</h2>
-				<p class="lead center">Aamazing application to help you get the weather!</p>
+				<h2 class="center">Weather App</h2>
+				<p class="lead center">Get your weather report from any city around the world</p>
 								
 				<?php 
 					echo $message;
@@ -79,48 +59,8 @@
 <!-- Latest compiled and minified JavaScript -->
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
-<!-- LOCAL JAVASCRIPT -->
-<script>
-	
-	$("#get-weather").click(function(event) {
-		
-		event.preventDefault();
-		
-		if ($("#city").val() != "") {
-		
-			$.get("scraper.php?city=" + $("#city").val(), function(data){
-				
-				//alert(data);
-				
-				// Clear and hide any alert Div status for a fresh start
-				$("#message").removeClass("alert alert-success alert-warning alert-danger");
-
-				// If the city was not found then display a message
-				if (!data) {
-					
-
-					$("#message").addClass("alert alert-warning");
-					$("#message").html("<strong>Warning!</strong><br />We're sorry we could not find the city you entered, please try again!");		
-					
-				// City was found - display the weather
-				} else {
-				
-					$("#message").addClass("alert alert-success");
-					$("#message").html("<strong>Your Weather Report for " + $("#city").val() + " is:</strong><br />" + data);		
-				
-				}
-			});
-		
-		} else {
-			
-			//alert("Please enter a city!");
-			
-			$("#message").addClass("alert alert-danger");
-			$("#message").html("<strong>Warning!</strong><br />Please enter a city and try again!");
-		}
-	});
-	
-</script>
+<!-- APP Javascript -->
+<script src="assets/js/app.js"></script>
 	
 </body>
 </html>
