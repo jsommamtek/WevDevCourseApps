@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-    <title>My Weather App</title>
+    <title>Weather Finder</title>
 
     <meta charset="utf-8" />
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
@@ -25,7 +25,7 @@
 		<div class="row">
 			<div class="col-md-6 col-md-offset-3 email-form">
 			
-				<h2 class="center">Weather App</h2>
+				<h2 class="center">Weather Finder</h2>
 				<p class="lead center">Get your weather report from any city around the world</p>
 								
 				<?php 
