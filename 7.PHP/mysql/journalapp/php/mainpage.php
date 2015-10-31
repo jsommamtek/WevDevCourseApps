@@ -22,13 +22,13 @@
     <title>My Journal Home</title>
 
     <!-- BOOTSTRAP CSS REF -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     
     <!-- BOOTSTRAP OPTIONAL THEME -->
-	  <!-- link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"> -->
+	  <!-- link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"> -->
 
     <!-- MAINPAGE CSS REF -->
-    <link href="../assets/css/mainpage.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/app.css" rel="stylesheet" type="text/css" />
 
   </head>
 
@@ -75,10 +75,10 @@
     <!-- SCRIPTS SECTION AND LIBRARY REF -->
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     
     <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     
     <!-- Custom app specific javascript library -->
     <script src="../assets/js/mainpage.js"></script>

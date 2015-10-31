@@ -3,11 +3,11 @@
 // Start a new Session
 session_start();
 
-$debugOn = TRUE;
+$debugOn = FALSE;
 
 $debug .= "<br />Session Id: ".$_SESSION['id'];
 
-$error = "HUGE ERROR";
+$error = "";
 
 $debug .= "<br />error: ".$error;
 
