@@ -3,11 +3,13 @@
 // Start a new Session
 session_start();
 
-$debugOn = FALSE;
+$debugOn = TRUE;
 
 $debug .= "<br />Session Id: ".$_SESSION['id'];
 
-$error = "";
+$error = "HUGE ERROR";
+
+$debug .= "<br />error: ".$error;
 
 $success = "";
 
@@ -61,7 +63,7 @@ if ($_POST['submit'] == "Sign Up") {
 	} else {
 				
 		// Connect to the database
-		include("connection.php");
+		include("php/connection.php");
 		
 		// Build query to check if user email address already exists in the database
 		$query = "select id from users where email = 
@@ -115,7 +117,7 @@ if ($_POST['submit'] == "Sign Up") {
 
 						// TODO: Redirect user from sign-up page to logged in Diary Home Page
 						//flush();
-						header("Location:mainpage.php");
+						header("Location:php/mainpage.php");
 						exit();
 																		
 					} else {
@@ -159,7 +161,7 @@ if ($_POST['submit'] == "Sign Up") {
 		$debug .= "</br />Log In form was submitted";
 		
 		// Connect to the database
-		include("connection.php");
+		include("php/connection.php");
 		
 		// Build query to validate user account info in the database
 		$query = "SELECT id FROM users WHERE email = 
@@ -195,7 +197,7 @@ if ($_POST['submit'] == "Sign Up") {
 									
 				// TODO: Redirect user from Log In page to Diary Home Page
 				//flush();
-				header("Location:mainpage.php");
+				header("Location:php/mainpage.php");
 				exit();
 			
 			// No matching account was found in the database
