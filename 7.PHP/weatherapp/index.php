@@ -25,7 +25,7 @@
 		<div class="row">
 			<div class="col-md-6 col-md-offset-3 email-form">
 			
-				<h2 class="center">Weather Finder</h2>
+				<h1 class="center">Weather Finder</h1>
 				<p class="lead center">Get your weather report from any city around the world</p>
 								
 				<?php 
