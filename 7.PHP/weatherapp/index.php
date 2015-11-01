@@ -26,7 +26,7 @@
 			<div class="col-md-6 col-md-offset-3 email-form">
 			
 				<h1 class="center">Weather Finder</h1>
-				<p class="lead center">Get your weather report from any city around the world</p>
+				<p class="lead center">Get your 7-day weather forcast from any city around the world</p>
 								
 				<?php 
 					echo $message;
