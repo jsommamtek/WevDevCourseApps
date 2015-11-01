@@ -60,7 +60,7 @@
 
       <div class="row">
 
-        <div class="col-md-6 col-md-offset-3" id="topRow">
+        <div class="col-md-6 col-md-offset-3 top-row">
 
           <h1 class="marginTop">Journal Entry</h1>
           

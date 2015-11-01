@@ -45,11 +45,11 @@
           <form method="post" class="navbar-form navbar-right">
 
             <div class="form-group">
-              <input type="email" class="form-control" name="loginEmail" id="loginEmail" value="<?php echo addslashes($_POST['loginEmail']) ?>" placeholder="Email Address" />
+              <input type="email" class="form-control" name="loginEmail" id="loginEmail" value="<?php echo addslashes($_POST['loginEmail']) ?>" placeholder="EMAIL ADDRESS" />
             </div>
             
             <div class="form-group">
-              <input type="password" class="form-control" name="loginPassword" value="<?php echo addslashes($_POST['loginPassword']) ?>" placeholder="Password"/>	
+              <input type="password" class="form-control" name="loginPassword" value="<?php echo addslashes($_POST['loginPassword']) ?>" placeholder="PASSWORD"/>	
             </div>
             
             <div class="form-group">	
@@ -66,12 +66,12 @@
 
     <div class="container contentContainer topContainer" id="home">
 
-      <div class="row">
+      <div class="row top-row">
 
-        <div class="col-md-6 col-md-offset-3" id="topRow">
-          <h1 class="marginTop">My Journal</h1>
-          <p class="lead">Your own private journal, with you wherever you go.</p>
-          <p class="bold marginTop">Interested? Please Sign Up Below!</p>
+        <div class="col-md-4 col-md-offset-4">
+          <h1>My Journal</h1>
+          <p class="lead mt-lead">Your own private journal, with you wherever you go</p>
+          <p class="mt-cta">Please Sign Up Below!</p>
           
           <!-- Message div for UI status -->
           <div id="message"></div>
@@ -83,13 +83,11 @@
           <form method="post" class="marginTop">
             
             <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" class="form-control" name="email" id="email" value="<?php echo addslashes($_POST['email']) ?>" placeholder="Email Address" />
+              <input type="email" class="form-control  mt-form-signup" name="email" id="email" value="<?php echo addslashes($_POST['email']) ?>" placeholder="EMAIL ADDRESS" />
             </div>
                     
             <div class="form-group">
-              <label for="password">Password</label>
-              <input type="password" class="form-control" name="password" value="<?php echo addslashes($_POST['password']) ?>" placeholder="Password" />	
+              <input type="password" class="form-control mt-form-signup" name="password" value="<?php echo addslashes($_POST['password']) ?>" placeholder="PASSWORD" />	
             </div>
             
             <div class="form-group">
@@ -129,7 +127,7 @@
             //alert ("There were Errors");
       
             $("#message").addClass("alert alert-warning");
-            $("#message").html("<strong>Warning!</strong><br />" + error);	
+            $("#message").html(error);	
       
       // Check for success message from login.php
       } else if (success !== "") {
@@ -137,7 +135,7 @@
             //alert ("There were Successes");
       
             $("#message").addClass("alert alert-success");
-            $("#message").html("<strong>Success!</strong><br />" + success);
+            $("#message").html(success);
       
       // Clear and hide any alert div status for a fresh start
       } else {
