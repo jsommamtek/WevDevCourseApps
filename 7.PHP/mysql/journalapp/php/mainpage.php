@@ -21,43 +21,40 @@
 
   <body data-spy="scroll" data-target=".navbar-collapse">
 
+    <!-- NAV BAR -->
     <div class="navbar navbar-default navbar-fixed-top">
-
       <div class="container">
 
+        <!-- BRAND -->
         <div class="navbar-header pull-left">
-
           <a class="navbar-brand">My Journal</a>
-
         </div>
 
+        <!-- LOG OUT LINK -->
         <div>
-
-			<ul class="navbar-nav nav pull-right">
-				<li><a href="../index.php?logout=1">Log Out</a></li>
-			</ul>
-
+          <ul class="navbar-nav nav pull-right">
+            <li><a href="../index.php?logout=1">Log Out</a></li>
+          </ul>
         </div>
+        
+      </div> <!-- end .container -->
+    </div> <!-- end nav bar -->
 
-      </div>
-
-    </div>
-
+    <!-- JOURNAL HEADER AND TEXT -->
     <div class="container contentContainer topContainer" id="home">
 
       <div class="row">
-
         <div class="col-md-6 col-md-offset-3 top-row">
-
-          <h1 class="marginTop marginBottom">Journal Entry</h1>
           
+          <!-- DEBUG DIV FOR UI MESSAGES -->
+          <div id="debug"></div>
+          
+          <h1 class="marginTop marginBottom">Journal Entry</h1>
           <textarea class="form-control mt-journal-entry"><?php echo $diary; ?></textarea>
-
         </div>
-
       </div>
-
-    </div>
+      
+    </div> <!-- end .container -->
 
     <!-- SCRIPTS SECTION AND LIBRARY REF -->
 
@@ -68,7 +65,23 @@
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     
     <!-- Custom app specific javascript library -->
-    <script src="../assets/js/mainpage.js"></script>
+    <script src="../assets/js/mainPage.js"></script>
+
+    <script>
+                  
+      // Check debug status from getJournal.php and display if turned on
+      var debugStatus = "<?php echo addslashes($debugOn); ?>";
+      var debug = "<?php echo addslashes($debug); ?>";
+      
+      if (debugStatus) {        
+        //alert ("debugStatus ON");
+        $("#debug").addClass("alert alert-info");
+        $("#debug").html("<strong>Debug Information</strong><br />" + debug);
+      } else {
+        $("#debug").removeClass("alert alert-success alert-warning alert-danger");
+      }
+
+    </script>
 
   </body>
 </html>

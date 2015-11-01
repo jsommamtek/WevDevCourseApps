@@ -1,14 +1,17 @@
-<?php`
-	session_start();
+<?php
+
+  session_start();
 	
-	//print_r($_SESSION);
+  $debugOn = FALSE;
 	
-	include("connection.php");
+  $debug .= "<br />Session Id: ".$_SESSION['id'];
 	
-	$query = "UPDATE users SET diary = '".mysqli_real_escape_string($connection, $_POST['diary'])."' WHERE id = ".$_SESSION['id']." LIMIT 1";
+  include("connection.php");
 	
-	//echo $query;
+  $query = "UPDATE users SET diary = '".mysqli_real_escape_string($connection, $_POST['diary'])."' WHERE id = ".$_SESSION['id']." LIMIT 1";
 	
-	mysqli_query($connection, $query);
+  $debug .= "<br />$query: ".$query;
+	
+  mysqli_query($connection, $query);
 
 ?>
