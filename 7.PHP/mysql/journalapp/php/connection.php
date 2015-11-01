@@ -1,5 +1,5 @@
 <?php
-		
+
 	$dbHost = "localhost";
 	$dbUser = "udemy";
 	$dbPwd = "udemy";
@@ -13,6 +13,6 @@
 		die (mysqli_connect_error());
 	}
 	
-	echo "<br />Connected to the Udemy database!";
+	//echo "<br />Connected to the Udemy database!";
 	
 ?>

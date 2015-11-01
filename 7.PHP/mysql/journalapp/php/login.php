@@ -66,7 +66,7 @@ if ($_POST['submit'] == "Sign Up") {
 		include("php/connection.php");
 		
 		// Build query to check if user email address already exists in the database
-		$query = "select id from users where email = 
+		$query = "select id from Users where email = 
 					'".mysqli_real_escape_string($connection, $_POST['email'])."'";
 		
 		//$debug .= "<br />query: ".$query;
@@ -86,7 +86,7 @@ if ($_POST['submit'] == "Sign Up") {
 			} else {
 				
 				// Insert the new user account into the database users table
-				$query = "insert into users (email, password) 
+				$query = "insert into Users (email, password) 
 							values ('".mysqli_real_escape_string($connection, $_POST['email'])."',
 									'".mysqli_real_escape_string($connection, md5(md5($_POST['email']).$_POST['password']))."')";
 									
@@ -117,7 +117,7 @@ if ($_POST['submit'] == "Sign Up") {
 
 						// TODO: Redirect user from sign-up page to logged in Diary Home Page
 						//flush();
-						header("Location:php/mainpage.php");
+						header("Location:php/mainPage.php");
 						exit();
 																		
 					} else {
@@ -164,7 +164,7 @@ if ($_POST['submit'] == "Sign Up") {
 		include("php/connection.php");
 		
 		// Build query to validate user account info in the database
-		$query = "SELECT id FROM users WHERE email = 
+		$query = "SELECT id FROM Users WHERE email = 
 					'".mysqli_real_escape_string($connection, $_POST['loginEmail'])."' AND password ='"
 						.mysqli_real_escape_string($connection, md5(md5($_POST['loginEmail']).$_POST['loginPassword']))."' LIMIT 1";
 		
@@ -195,9 +195,9 @@ if ($_POST['submit'] == "Sign Up") {
 				// Close connection to the database
 				mysqli_close($connection);
 									
-				// TODO: Redirect user from Log In page to Diary Home Page
+				// TODO: Redirect user from Log In page to Journal Home Page
 				//flush();
-				header("Location:php/mainpage.php");
+				header("Location:php/mainPage.php");
 				exit();
 			
 			// No matching account was found in the database
