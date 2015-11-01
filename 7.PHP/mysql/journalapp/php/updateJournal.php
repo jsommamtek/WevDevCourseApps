@@ -8,7 +8,7 @@
 	
   include("connection.php");
 	
-  $query = "UPDATE users SET diary = '".mysqli_real_escape_string($connection, $_POST['diary'])."' WHERE id = ".$_SESSION['id']." LIMIT 1";
+  $query = "UPDATE Users SET diary = '".mysqli_real_escape_string($connection, $_POST['diary'])."' WHERE id = ".$_SESSION['id']." LIMIT 1";
 	
   $debug .= "<br />$query: ".$query;
 	
