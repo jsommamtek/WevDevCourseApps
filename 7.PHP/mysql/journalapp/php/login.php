@@ -15,7 +15,7 @@ $success = "";
 
 if ($_GET['logout'] == 1 AND $_SESSION['id'] ) {
 	session_destroy();
-	$success = "You have been logged out, have a nice day!";
+	$success = "<br />You have been logged out, have a nice day!";
 }
 	
 // PROCESS THE SIGN-UP FORM
