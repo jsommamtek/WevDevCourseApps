@@ -62,9 +62,9 @@
 
         <div class="col-md-6 col-md-offset-3 top-row">
 
-          <h1 class="marginTop">Journal Entry</h1>
+          <h1 class="marginTop marginBottom">Journal Entry</h1>
           
-          <textarea class="form-control"><?php echo $diary; ?></textarea>
+          <textarea class="form-control mt-journal-entry"><?php echo $diary; ?></textarea>
 
         </div>
 
